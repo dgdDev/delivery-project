@@ -5,7 +5,7 @@
 // Número de WhatsApp de la heladería.
 // Formato: código de país + número, sin "+", espacios ni guiones.
 // Ejemplo Argentina: 5491123456789
-const NUMERO_WHATSAPP = "5490000000000";
+const NUMERO_WHATSAPP = "+54 9 2944 66-9322";
 
 const formulario = document.getElementById("form-pedido");
 const textoTotal = document.getElementById("total");
