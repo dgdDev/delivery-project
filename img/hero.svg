@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420">
+  <!-- Fondo circular -->
+  <circle cx="210" cy="210" r="200" fill="#fdeee3"/>
+
+  <!-- Cerros del fondo -->
+  <clipPath id="circulo"><circle cx="210" cy="210" r="200"/></clipPath>
+  <g clip-path="url(#circulo)">
+    <path d="M0 300 L90 190 L150 250 L230 150 L320 260 L370 210 L420 270 L420 420 L0 420 Z" fill="#2bb3a3" opacity="0.35"/>
+    <path d="M0 330 L70 260 L140 320 L250 220 L340 310 L420 270 L420 420 L0 420 Z" fill="#2bb3a3"/>
+    <path d="M250 220 L272 242 L258 250 L246 240 L232 248 Z" fill="#ffffff"/>
+    <path d="M70 260 L86 276 L74 282 L62 274 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Sombra -->
+  <ellipse cx="210" cy="392" rx="58" ry="10" fill="#3b2a26" opacity="0.15"/>
+
+  <!-- Cucurucho -->
+  <path d="M150 220 L270 220 L214 385 Q210 392 206 385 Z" fill="#e3a35c"/>
+  <g stroke="#c9843f" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M165 232 L232 340"/>
+    <path d="M195 228 L244 306"/>
+    <path d="M228 226 L256 270"/>
+    <path d="M255 232 L188 340"/>
+    <path d="M225 228 L176 306"/>
+    <path d="M192 226 L164 270"/>
+  </g>
+  <rect x="144" y="210" width="132" height="20" rx="10" fill="#d48f47"/>
+
+  <!-- Bocha de chocolate (abajo izquierda) -->
+  <circle cx="170" cy="196" r="44" fill="#8a5a3c"/>
+  <path d="M128 206 Q140 228 152 212 Q160 232 172 214 Q186 230 196 212 Q206 222 212 208 L212 200 L128 200 Z" fill="#8a5a3c"/>
+  <circle cx="155" cy="180" r="9" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Bocha de menta (abajo derecha) -->
+  <circle cx="252" cy="196" r="44" fill="#9fe0cf"/>
+  <path d="M210 208 Q218 226 230 212 Q240 232 252 214 Q266 230 276 212 Q286 226 294 206 L294 200 L210 200 Z" fill="#9fe0cf"/>
+  <circle cx="237" cy="180" r="9" fill="#ffffff" opacity="0.45"/>
+  <g fill="#3b2a26">
+    <rect x="258" y="176" width="7" height="4" rx="2" transform="rotate(30 261 178)"/>
+    <rect x="240" y="206" width="7" height="4" rx="2" transform="rotate(-20 243 208)"/>
+    <rect x="272" y="200" width="7" height="4" rx="2" transform="rotate(60 275 202)"/>
+  </g>
+
+  <!-- Bocha de frutilla (arriba) -->
+  <circle cx="211" cy="136" r="48" fill="#e8577a"/>
+  <path d="M166 148 Q176 170 190 154 Q198 174 212 156 Q226 172 234 154 Q246 168 256 148 L256 140 L166 140 Z" fill="#e8577a"/>
+  <circle cx="194" cy="118" r="11" fill="#ffffff" opacity="0.45"/>
+
+  <!-- Chispas -->
+  <g stroke-width="5" stroke-linecap="round">
+    <path d="M200 102 L208 98" stroke="#f9c74f"/>
+    <path d="M226 110 L230 118" stroke="#2bb3a3"/>
+    <path d="M218 140 L226 138" stroke="#ffffff"/>
+    <path d="M190 146 L194 152" stroke="#f9c74f"/>
+    <path d="M238 132 L244 128" stroke="#ffffff"/>
+  </g>
+
+  <!-- Cereza -->
+  <path d="M214 90 Q222 66 238 60" stroke="#3b2a26" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="212" cy="92" r="14" fill="#c93d61"/>
+  <circle cx="207" cy="87" r="4" fill="#ffffff" opacity="0.6"/>
+</svg>

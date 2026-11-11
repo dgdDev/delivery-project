@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heladería Cerros | Helados a domicilio</title>
+  <meta name="description" content="Heladería Cerros: helados artesanales con delivery. Elegí tus sabores y pedí por WhatsApp.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a href="#inicio" class="logo">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>Cerros</span>
+      </a>
+
+      <!-- Menú hamburguesa sin JavaScript (truco del checkbox) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#sabores">Sabores</a>
+        <a href="#precios">Precios</a>
+        <a href="#zonas">Envíos</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#pedido" class="boton boton--chico">Pedí ahora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== INICIO ===== -->
+    <section id="inicio" class="hero">
+      <div class="contenedor hero__inner">
+        <div class="hero__texto">
+          <span class="etiqueta">🍦 Helado artesanal a domicilio</span>
+          <h1>El helado de siempre, <em>en tu puerta</em></h1>
+          <p>Elegí tus sabores favoritos, completá el pedido y te lo enviamos bien frío en menos de 40 minutos.</p>
+          <div class="hero__botones">
+            <a href="#pedido" class="boton">Pedí ahora</a>
+            <a href="#sabores" class="boton boton--borde">Ver sabores</a>
+          </div>
+        </div>
+        <img src="img/hero.svg" alt="Cucurucho con tres bochas de helado frente a unos cerros" class="hero__imagen" width="420" height="420">
+      </div>
+    </section>
+
+    <!-- ===== CÓMO PEDIR ===== -->
+    <section id="como-pedir" class="seccion">
+      <div class="contenedor">
+        <h2 class="titulo">¿Cómo pedir?</h2>
+        <p class="subtitulo">Tres pasos y listo.</p>
+        <div class="pasos">
+          <article class="paso">
+            <div class="paso__icono">🍨</div>
+            <h3>1. Elegí</h3>
+            <p>Mirá nuestros sabores y elegí el envase que más te guste.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__icono">📝</div>
+            <h3>2. Completá</h3>
+            <p>Llená el formulario con tus datos y tu dirección.</p>
+          </article>
+          <article class="paso">
+            <div class="paso__icono">🛵</div>
+            <h3>3. Recibí</h3>
+            <p>Enviás el pedido por WhatsApp y te lo llevamos a tu casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SABORES ===== -->
+    <section id="sabores" class="seccion seccion--color">
+      <div class="contenedor">
+        <h2 class="titulo">Nuestros sabores</h2>
+        <p class="subtitulo">Hechos todos los días con ingredientes naturales.</p>
+
+        <h3 class="categoria">Cremas</h3>
+        <div class="sabores">
+          <article class="sabor"><div class="bocha" style="--color:#f6e7b4"></div><h4>Vainilla</h4><p>Clásica y suave.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#f7a8b8"></div><h4>Frutilla a la crema</h4><p>Frutillas frescas con crema.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#fbf3e4"></div><h4>Crema americana</h4><p>El favorito de los chicos.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#f2d16b"></div><h4>Sambayón</h4><p>Receta tradicional.</p></article>
+        </div>
+
+        <h3 class="categoria">Chocolates</h3>
+        <div class="sabores">
+          <article class="sabor"><div class="bocha" style="--color:#8a5a3c"></div><h4>Chocolate</h4><p>Cremoso y bien chocolatoso.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#4b2e22"></div><h4>Chocolate amargo</h4><p>Cacao 70%, intenso.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#a0705a"></div><h4>Chocolate con almendras</h4><p>Con almendras tostadas.</p></article>
+        </div>
+
+        <h3 class="categoria">Dulce de leche</h3>
+        <div class="sabores">
+          <article class="sabor"><div class="bocha" style="--color:#c98b4f"></div><h4>Dulce de leche</h4><p>El clásico de la casa.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#b97c45"></div><h4>Dulce de leche granizado</h4><p>Con trocitos de chocolate.</p></article>
+        </div>
+
+        <h3 class="categoria">Frutales (al agua)</h3>
+        <div class="sabores">
+          <article class="sabor"><div class="bocha" style="--color:#f4ef8a"></div><h4>Limón</h4><p>Fresco y liviano.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#f9c74f"></div><h4>Maracuyá</h4><p>Tropical y ácido.</p></article>
+          <article class="sabor"><div class="bocha" style="--color:#e5566f"></div><h4>Frutos rojos</h4><p>Frutilla, frambuesa y mora.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRECIOS ===== -->
+    <section id="precios" class="seccion">
+      <div class="contenedor">
+        <h2 class="titulo">Precios</h2>
+        <p class="subtitulo">Elegí el tamaño según cuántos sean.</p>
+        <div class="precios">
+          <article class="precio">
+            <h3>Cucurucho</h3>
+            <p class="precio__valor">$3.000</p>
+            <p>Hasta 2 sabores</p>
+          </article>
+          <article class="precio">
+            <h3>¼ kg</h3>
+            <p class="precio__valor">$5.000</p>
+            <p>Hasta 3 sabores</p>
+          </article>
+          <article class="precio precio--destacado">
+            <span class="precio__badge">Más pedido</span>
+            <h3>½ kg</h3>
+            <p class="precio__valor">$8.500</p>
+            <p>Hasta 3 sabores</p>
+          </article>
+          <article class="precio">
+            <h3>1 kg</h3>
+            <p class="precio__valor">$15.000</p>
+            <p>Hasta 4 sabores</p>
+          </article>
+        </div>
+        <p class="nota">Agregados: salsa de chocolate $500 · chispas de colores $400 · cucuruchos extra $300.</p>
+      </div>
+    </section>
+
+    <!-- ===== ZONAS DE ENVÍO ===== -->
+    <section id="zonas" class="seccion seccion--color">
+      <div class="contenedor">
+        <h2 class="titulo">Zonas de envío</h2>
+        <p class="subtitulo">Llevamos tu helado en conservadoras térmicas.</p>
+        <div class="tabla-wrap">
+          <table class="tabla">
+            <thead>
+              <tr><th>Zona</th><th>Costo de envío</th><th>Tiempo estimado</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Centro</td><td>$800</td><td>20–30 min</td></tr>
+              <tr><td>Zona Norte</td><td>$1.200</td><td>30–40 min</td></tr>
+              <tr><td>Zona Sur</td><td>$1.200</td><td>30–40 min</td></tr>
+              <tr><td>Alrededores</td><td>$2.000</td><td>40–50 min</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMULARIO DE PEDIDO ===== -->
+    <section id="pedido" class="seccion">
+      <div class="contenedor contenedor--angosto">
+        <h2 class="titulo">Hacé tu pedido</h2>
+        <p class="subtitulo">Completá el formulario y lo enviamos por WhatsApp.</p>
+
+        <form id="form-pedido" class="formulario">
+
+          <fieldset>
+            <legend>1. Elegí el envase</legend>
+            <div class="opciones">
+              <label class="chip"><input type="radio" name="envase" value="Cucurucho" data-precio="3000" data-max="2" required><span>Cucurucho <small>$3.000</small></span></label>
+              <label class="chip"><input type="radio" name="envase" value="1/4 kg" data-precio="5000" data-max="3"><span>¼ kg <small>$5.000</small></span></label>
+              <label class="chip"><input type="radio" name="envase" value="1/2 kg" data-precio="8500" data-max="3"><span>½ kg <small>$8.500</small></span></label>
+              <label class="chip"><input type="radio" name="envase" value="1 kg" data-precio="15000" data-max="4"><span>1 kg <small>$15.000</small></span></label>
+            </div>
+            <label class="campo campo--cantidad">
+              Cantidad
+              <input type="number" name="cantidad" value="1" min="1" max="10" required>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Elegí los sabores</legend>
+            <p class="ayuda" id="ayuda-sabores">Elegí primero el envase para saber cuántos sabores podés pedir.</p>
+            <div class="opciones">
+              <label class="chip"><input type="checkbox" name="sabores" value="Vainilla"><span>Vainilla</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Frutilla a la crema"><span>Frutilla a la crema</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Crema americana"><span>Crema americana</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Sambayón"><span>Sambayón</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Chocolate"><span>Chocolate</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Chocolate amargo"><span>Chocolate amargo</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Chocolate con almendras"><span>Chocolate con almendras</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Dulce de leche"><span>Dulce de leche</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Dulce de leche granizado"><span>DDL granizado</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Limón"><span>Limón</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Maracuyá"><span>Maracuyá</span></label>
+              <label class="chip"><input type="checkbox" name="sabores" value="Frutos rojos"><span>Frutos rojos</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Agregados <small>(opcional)</small></legend>
+            <div class="opciones">
+              <label class="chip"><input type="checkbox" name="extras" value="Salsa de chocolate" data-precio="500"><span>Salsa de chocolate <small>$500</small></span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="Chispas de colores" data-precio="400"><span>Chispas de colores <small>$400</small></span></label>
+              <label class="chip"><input type="checkbox" name="extras" value="Cucuruchos extra" data-precio="300"><span>Cucuruchos extra <small>$300</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Tus datos</legend>
+            <div class="campos">
+              <label class="campo">Nombre
+                <input type="text" name="nombre" placeholder="Ej: Juana Pérez" required>
+              </label>
+              <label class="campo">Teléfono
+                <input type="tel" name="telefono" placeholder="Ej: 11 2345 6789" required>
+              </label>
+              <label class="campo campo--ancho">Dirección
+                <input type="text" name="direccion" placeholder="Calle, número, piso/depto" required>
+              </label>
+              <label class="campo">Zona
+                <select name="zona" required>
+                  <option value="">Elegí tu zona</option>
+                  <option value="Centro" data-precio="800">Centro ($800)</option>
+                  <option value="Zona Norte" data-precio="1200">Zona Norte ($1.200)</option>
+                  <option value="Zona Sur" data-precio="1200">Zona Sur ($1.200)</option>
+                  <option value="Alrededores" data-precio="2000">Alrededores ($2.000)</option>
+                </select>
+              </label>
+              <label class="campo">Horario de entrega
+                <select name="horario">
+                  <option value="Lo antes posible">Lo antes posible</option>
+                  <option value="En 1 hora">En 1 hora</option>
+                  <option value="En 2 horas">En 2 horas</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>5. Forma de pago</legend>
+            <div class="opciones">
+              <label class="chip"><input type="radio" name="pago" value="Efectivo" required><span>💵 Efectivo</span></label>
+              <label class="chip"><input type="radio" name="pago" value="Transferencia"><span>📱 Transferencia</span></label>
+            </div>
+            <label class="campo campo--ancho">Notas <small>(opcional)</small>
+              <textarea name="notas" rows="3" placeholder="Ej: tocar timbre 2B, traer cambio de $10.000"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="resumen">
+            <p>Total estimado: <strong id="total">$0</strong></p>
+            <button type="submit" class="boton boton--whatsapp">Enviar pedido por WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== PREGUNTAS FRECUENTES ===== -->
+    <section id="preguntas" class="seccion seccion--color">
+      <div class="contenedor contenedor--angosto">
+        <h2 class="titulo">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details>
+            <summary>¿En qué horario hacen envíos?</summary>
+            <p>Todos los días de 12 a 24 h. Los viernes y sábados hasta la 1 h.</p>
+          </details>
+          <details>
+            <summary>¿El helado llega derretido?</summary>
+            <p>No. Lo llevamos en conservadoras térmicas para que llegue perfecto.</p>
+          </details>
+          <details>
+            <summary>¿Puedo pagar con transferencia?</summary>
+            <p>Sí. Al confirmar el pedido por WhatsApp te enviamos los datos para transferir.</p>
+          </details>
+          <details>
+            <summary>¿Tienen sabores sin TACC o veganos?</summary>
+            <p>Los sabores frutales al agua no tienen lácteos. Consultanos por WhatsApp por opciones sin TACC.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA / CONTACTO ===== -->
+  <footer class="footer">
+    <div class="contenedor footer__inner">
+      <div>
+        <a href="#inicio" class="logo logo--claro">
+          <img src="img/logo.svg" alt="" width="36" height="36">
+          <span>Cerros</span>
+        </a>
+        <p>Helados artesanales desde la montaña hasta tu casa.</p>
+      </div>
+      <div>
+        <h4>Horarios</h4>
+        <p>Lunes a domingo<br>12:00 a 24:00 h</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Av. Siempre Viva 123<br>Instagram: @heladeriacerros</p>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Heladería Cerros · Trabajo escolar</p>
+  </footer>
+
+  <script src="js/pedido.js"></script>
+</body>
+</html>

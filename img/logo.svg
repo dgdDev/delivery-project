@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#fdeee3"/>
+  <!-- Cerros -->
+  <path d="M4 46 L22 24 L32 36 L42 22 L60 46 Z" fill="#2bb3a3"/>
+  <path d="M22 24 L26 29 L22 31 L18 29 Z M42 22 L46.5 28 L42 30 L37.5 28 Z" fill="#ffffff"/>
+  <!-- Bocha de helado -->
+  <circle cx="32" cy="22" r="11" fill="#e8577a"/>
+  <circle cx="28" cy="18" r="3" fill="#ffffff" opacity="0.55"/>
+  <path d="M4 46 Q32 58 60 46 A32 32 0 0 1 4 46 Z" fill="#3b2a26" opacity="0.12"/>
+</svg>

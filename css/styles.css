@@ -1,0 +1,865 @@
+/* =========================================================
+   Heladería Cerros - Estilos
+   ========================================================= */
+
+/* ---------- Variables (colores y medidas) ---------- */
+:root {
+  --rosa: #e8577a;
+  --rosa-oscuro: #c93d61;
+  --menta: #2bb3a3;
+  --chocolate: #3b2a26;
+  --crema: #fff8f1;
+  --crema-2: #fdeee3;
+  --blanco: #ffffff;
+  --gris: #7a6a64;
+  --whatsapp: #25d366;
+  --whatsapp-oscuro: #1da851;
+
+  --radio: 18px;
+  --sombra: 0 8px 24px rgba(59, 42, 38, 0.08);
+  --sombra-fuerte: 0 14px 34px rgba(59, 42, 38, 0.16);
+  --fuente-titulo: "Fredoka", system-ui, sans-serif;
+  --fuente-texto: "Nunito", system-ui, sans-serif;
+  --alto-header: 68px;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Para que el header fijo no tape el título al navegar */
+  scroll-padding-top: var(--alto-header);
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--chocolate);
+  background: var(--crema);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulo);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: inherit;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.contenedor--angosto {
+  max-width: 760px;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-block;
+  padding: 14px 26px;
+  border: 2px solid var(--rosa);
+  border-radius: 999px;
+  background: var(--rosa);
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.boton:hover {
+  background: var(--rosa-oscuro);
+  border-color: var(--rosa-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(232, 87, 122, 0.35);
+}
+
+.boton--borde {
+  background: transparent;
+  color: var(--rosa);
+}
+
+.boton--borde:hover {
+  color: var(--blanco);
+}
+
+.boton--chico {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}
+
+.boton--whatsapp {
+  background: var(--whatsapp);
+  border-color: var(--whatsapp);
+}
+
+.boton--whatsapp:hover {
+  background: var(--whatsapp-oscuro);
+  border-color: var(--whatsapp-oscuro);
+  box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+}
+
+/* ---------- Header / navegación ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 248, 241, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(59, 42, 38, 0.06);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--alto-header);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fuente-titulo);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--chocolate);
+  text-decoration: none;
+}
+
+.logo--claro {
+  color: var(--blanco);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav a {
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:not(.boton):hover {
+  color: var(--rosa);
+}
+
+.nav .boton {
+  color: var(--blanco);
+}
+
+/* Menú hamburguesa (solo se ve en celular) */
+.menu-toggle {
+  display: none;
+}
+
+.menu-boton {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-boton span {
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--chocolate);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ---------- Hero (inicio) ---------- */
+.hero {
+  padding: 48px 0 72px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(43, 179, 163, 0.18), transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(232, 87, 122, 0.15), transparent 45%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 6vw, 3.8rem);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--rosa);
+}
+
+.hero p {
+  max-width: 480px;
+  font-size: 1.15rem;
+  color: var(--gris);
+}
+
+.hero__botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero__imagen {
+  width: 100%;
+  max-width: 420px;
+  justify-self: center;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  padding: 80px 0;
+}
+
+.seccion--color {
+  background: var(--crema-2);
+}
+
+.titulo {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--gris);
+  margin-bottom: 44px;
+}
+
+/* ---------- Cómo pedir ---------- */
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.paso {
+  padding: 32px 24px;
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.paso:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.paso__icono {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--crema-2);
+  font-size: 2rem;
+}
+
+.paso p {
+  margin: 0;
+  color: var(--gris);
+}
+
+/* ---------- Sabores ---------- */
+.categoria {
+  margin: 36px 0 16px;
+  font-size: 1.35rem;
+  color: var(--rosa-oscuro);
+}
+
+.categoria:first-of-type {
+  margin-top: 0;
+}
+
+.sabores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.sabor {
+  padding: 24px 18px;
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.sabor:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.sabor h4 {
+  margin: 14px 0 4px;
+  font-size: 1.1rem;
+}
+
+.sabor p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--gris);
+}
+
+/* La "bocha" de helado se dibuja con CSS usando el color de cada sabor */
+.bocha {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.6) 0 12%, transparent 13%),
+    var(--color);
+  box-shadow: inset -8px -10px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Precios ---------- */
+.precios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.precio {
+  position: relative;
+  padding: 30px 18px;
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.precio h3 {
+  font-size: 1.3rem;
+}
+
+.precio p {
+  margin: 0;
+  color: var(--gris);
+}
+
+.precio .precio__valor {
+  margin: 4px 0 8px;
+  font-family: var(--fuente-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rosa);
+}
+
+.precio--destacado {
+  border-color: var(--rosa);
+  transform: scale(1.04);
+}
+
+.precio__badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--menta);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nota {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--gris);
+}
+
+/* ---------- Tabla de zonas ---------- */
+.tabla-wrap {
+  overflow-x: auto;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+}
+
+.tabla th,
+.tabla td {
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.tabla th {
+  background: var(--chocolate);
+  color: var(--blanco);
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background: var(--crema);
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--blanco);
+  box-shadow: var(--sombra-fuerte);
+}
+
+fieldset {
+  margin: 0 0 28px;
+  padding: 0 0 24px;
+  border: 0;
+  border-bottom: 1px dashed rgba(59, 42, 38, 0.15);
+}
+
+legend {
+  margin-bottom: 14px;
+  font-family: var(--fuente-titulo);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+legend small,
+.campo small {
+  font-family: var(--fuente-texto);
+  font-weight: 400;
+  color: var(--gris);
+}
+
+.ayuda {
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  color: var(--gris);
+}
+
+.ayuda--error {
+  color: var(--rosa-oscuro);
+  font-weight: 700;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* "Chips": el input queda oculto y se estiliza el texto */
+.chip {
+  position: relative;
+  cursor: pointer;
+}
+
+.chip input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.chip span {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid var(--crema-2);
+  border-radius: 999px;
+  background: var(--crema);
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.chip span small {
+  margin-left: 4px;
+  font-weight: 400;
+  color: var(--gris);
+}
+
+.chip:hover span {
+  border-color: var(--rosa);
+}
+
+.chip input:checked + span {
+  border-color: var(--rosa);
+  background: var(--rosa);
+  color: var(--blanco);
+}
+
+.chip input:checked + span small {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.chip input:focus-visible + span {
+  outline: 3px solid var(--menta);
+  outline-offset: 2px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.campo--ancho {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+}
+
+.campos .campo--ancho {
+  margin-top: 0;
+}
+
+.campo--cantidad {
+  max-width: 140px;
+  margin-top: 16px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--crema-2);
+  border-radius: 12px;
+  background: var(--crema);
+  color: var(--chocolate);
+  font: inherit;
+  font-weight: 400;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--menta);
+  background: var(--blanco);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.resumen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.resumen p {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.resumen strong {
+  font-family: var(--fuente-titulo);
+  font-size: 1.6rem;
+  color: var(--rosa);
+}
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq details {
+  border-radius: 14px;
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.faq summary {
+  position: relative;
+  padding: 18px 50px 18px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--rosa);
+  transition: transform 0.2s;
+}
+
+.faq details[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq details p {
+  margin: 0;
+  padding: 0 20px 18px;
+  color: var(--gris);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 56px 0 24px;
+  background: var(--chocolate);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer h4 {
+  color: var(--blanco);
+}
+
+.footer .logo {
+  margin-bottom: 12px;
+}
+
+.footer__copy {
+  margin: 40px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Responsive: tablet
+   ========================================================= */
+@media (max-width: 900px) {
+  .precios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .precio--destacado {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   Responsive: celular
+   ========================================================= */
+@media (max-width: 760px) {
+  /* Menú hamburguesa */
+  .menu-boton {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--alto-header);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 16px;
+    background: var(--crema);
+    box-shadow: var(--sombra-fuerte);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--crema-2);
+    text-align: center;
+  }
+
+  .nav .boton {
+    margin: 14px 0;
+    border-bottom: 2px solid var(--rosa);
+  }
+
+  .menu-toggle:checked ~ .nav {
+    max-height: 420px;
+    padding: 8px 16px;
+  }
+
+  /* Animación del ícono a "X" */
+  .menu-toggle:checked + .menu-boton span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .menu-boton span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .menu-boton span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero {
+    padding: 32px 0 56px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__botones {
+    justify-content: center;
+  }
+
+  .hero__imagen {
+    max-width: 280px;
+    grid-row: 1;
+  }
+
+  .seccion {
+    padding: 60px 0;
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+
+  .sabores {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .sabor {
+    padding: 18px 12px;
+  }
+
+  .bocha {
+    width: 60px;
+    height: 60px;
+  }
+
+  .formulario {
+    padding: 20px 16px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .resumen {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .resumen .boton {
+    width: 100%;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer .logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .precios {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Respeta a quien prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
